@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {View, StyleSheet} from 'react-native'
 import Simples from './componentes/Simples'
 import ParImpar from './componentes/ParImpar'
+import { Inverter } from './componentes/Multi'
 
 export default class App extends Component {
   render() {
@@ -9,6 +10,7 @@ export default class App extends Component {
       <View style={styles.container}>
         <Simples texto='Flexivel!!' />
         <ParImpar numero={37} />
+        <Inverter texto="React nativo" />
       </View>
     )
   }
