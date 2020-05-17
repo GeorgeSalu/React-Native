@@ -8,7 +8,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Simples texto='Flexivel!!' />
-        <ParImpar numero={32} />
+        <ParImpar numero={37} />
       </View>
     )
   }
