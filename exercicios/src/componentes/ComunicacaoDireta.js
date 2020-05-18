@@ -22,5 +22,11 @@ export const Avo = props =>
       <Filhos nome='Gui' />
       <Filhos nome='Davi' />
     </Pai>
-    
+    <Pai {...props} sobrenome="Pedro">
+      <Filhos nome='Rebeca' />
+      <Filhos nome='Renato' />
+    </Pai>
   </View>
+
+
+export default Avo

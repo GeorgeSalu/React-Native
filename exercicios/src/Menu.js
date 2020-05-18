@@ -9,6 +9,7 @@ import Contador from './componentes/Contador'
 import Plataformas from './componentes/Plataformas'
 import ValidarProps from './componentes/ValidarProps'
 import Evento from './componentes/Evento'
+import Avo from './componentes/ComunicacaoDireta'
 
 const megasena = () => <MegaSena numeros={8} />
 const parimpar = () => <ParImpar numero={20} />
@@ -18,6 +19,7 @@ const contador = () => <Contador numeroInicial={100} />
 const plataforma = () => <Plataformas />
 const validarProps = () => <ValidarProps ano={18} />
 const evento = () => <Evento />
+const avo = () => <Avo nome="joao" sobrenome="silva" />
 
 const Drawer = createDrawerNavigator();
 
@@ -25,6 +27,7 @@ export default function Menu() {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Simples">
+        <Drawer.Screen name="avo" component={avo } />
         <Drawer.Screen name="evento" component={evento } />
         <Drawer.Screen name="ValidarProps" component={validarProps } />
         <Drawer.Screen name="Plataformas" component={plataforma } />
