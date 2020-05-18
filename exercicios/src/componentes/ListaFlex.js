@@ -25,10 +25,14 @@ const alunos = [
 
 const itemsEstilo = {
   paddingHorizontal: 15,
-  height: 50,
+  height: 70,
   backgroundColor: '#DDD',
   borderWidth: 0.5,
-  borderColor: '#222'
+  borderColor: '#222',
+
+  //flex
+  alignItems: 'center',
+  justifyContent: 'center'
 }
 
 export const Aluno = props =>
