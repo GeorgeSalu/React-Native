@@ -7,7 +7,6 @@ import ParImpar from './componentes/ParImpar'
 import { Inverter, MegaSena } from './componentes/Multi'
 import Contador from './componentes/Contador'
 import Plataformas from './componentes/Plataformas'
-import { Platform } from 'react-native'
 
 const megasena = () => <MegaSena numeros={8} />
 const parimpar = () => <ParImpar numero={20} />
