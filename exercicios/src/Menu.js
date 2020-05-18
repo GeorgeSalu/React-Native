@@ -31,7 +31,7 @@ export default function Menu() {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Simples">
-        <Drawer.Screen name="Lista Flex" component={listaFlex } />
+        <Drawer.Screen name="Lista Flex Box" component={listaFlex } />
         <Drawer.Screen name="texto sincronizado" component={comunicacaoIndireta } />
         <Drawer.Screen name="avo" component={avo } />
         <Drawer.Screen name="evento" component={evento } />
