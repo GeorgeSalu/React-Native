@@ -1,4 +1,4 @@
-# React-Native
+### React Native
 
 Nesse curso, iremos abordar o desenvolvimento de aplicações nativas para dispositivos móveis (Android e iOS), utilizando apenas o JavaScript como linguagem de programação. Isso mesmo, você pode usar o mesmo código para ter aplicações em ambos os ecossistemas.
 
@@ -13,6 +13,4 @@ Além de todos os fundamentos, criaremos mais quatro projetos, inspirados em apl
 3. ToDo List: Com um layout bonito e mais elaborado. Vamos também criar uma API Rest em NodeJS como backend, integrando também com um banco relacional
 
 4. Intragram: Nessa aplicação, vamos integrar a câmera e galeria de imagens do dispositivo, vamos utilizar o Firebase como backend e seu banco NoSQL, sua autenticação e até mesmo seu serviço de storage.
-
-Assista as aulas abertas e veja os comentários dos nosso alunos sobre a nossa didática. Não tenho dúvida que você estará fazendo um excelente investimento e se juntando a nossa comunidade de mais de 30 mil alunos.
 
