@@ -12,7 +12,7 @@ export const Entrada = props =>
 export class TextoSincronizado extends Component {
 
   state = {
-    texto = ''
+    texto: ""
   }
 
   alterarTexto = texto => {
@@ -25,6 +25,8 @@ export class TextoSincronizado extends Component {
         <Text style={Padrao.fonte40}>
           {this.state.texto}
         </Text>
+        <Entrada texto={this.state.texto}
+          chamarQuandoMudar={this.alterarTexto} />
       </View>
     )
   }
