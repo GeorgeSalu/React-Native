@@ -17,8 +17,8 @@ export default function Menu() {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Simples">
-        <Drawer.Screen name="Megasena" component={megasena } />
-        <Drawer.Screen name="Parimpar" component={parimpar } />
+        <Drawer.Screen name="Mega Sena" component={megasena } />
+        <Drawer.Screen name="Par & Ímpar" component={parimpar } />
         <Drawer.Screen name="Inverter" component={inverter } />
         <Drawer.Screen name="Simples" component={simples } />
       </Drawer.Navigator>
