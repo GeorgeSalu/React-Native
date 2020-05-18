@@ -12,6 +12,7 @@ import Evento from './componentes/Evento'
 import Avo from './componentes/ComunicacaoDireta'
 import { TextoSincronizado } from './componentes/ComunicacaoIndireta'
 import ListaFlex from './componentes/ListaFlex'
+import Flex from './componentes/Flex'
 
 const megasena = () => <MegaSena numeros={8} />
 const parimpar = () => <ParImpar numero={20} />
@@ -24,6 +25,7 @@ const evento = () => <Evento />
 const avo = () => <Avo nome="joao" sobrenome="silva" />
 const comunicacaoIndireta = () => <TextoSincronizado />
 const listaFlex = () => <ListaFlex />
+const flex = () => <Flex />
 
 const Drawer = createDrawerNavigator();
 
@@ -31,6 +33,7 @@ export default function Menu() {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Simples">
+        <Drawer.Screen name="FlexBox" component={flex } />
         <Drawer.Screen name="Lista Flex Box" component={listaFlex } />
         <Drawer.Screen name="texto sincronizado" component={comunicacaoIndireta } />
         <Drawer.Screen name="avo" component={avo } />
