@@ -7,13 +7,7 @@ export default class Contador extends Component {
     numero: this.props.numeroInicial
   }
 
-  constructor(props) {
-    super(props)
-
-    this.maisUm = this.maisUm.bind(this)
-  }
-
-  maisUm() {
+  maisUm = () => {
     this.setState({ numero: this.state.numero + 1 })
   }
 
