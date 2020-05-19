@@ -20,5 +20,9 @@ const styles = StyleSheet.create({
 })
 
 export default props => {
-  
+  return (
+    <TouchableHighlight onPress={props.onClick}>
+      <Text style={styles.button}>{props.label}</Text>
+    </TouchableHighlight>
+  )
 }
