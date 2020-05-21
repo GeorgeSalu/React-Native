@@ -17,6 +17,7 @@ import {
   invertFlag,
   flagsUsed
 } from './functions'
+import Header from './components/Header'
 
 export default class App extends Component {
 
@@ -75,14 +76,14 @@ export default class App extends Component {
   render() {
     return (
       <View >
-        <Text style={styles.container}>Iniciando o mines</Text>
-        <Text>Tamanho da grade: 
-          {params.getRowsAmount()} x {params.getColumnsAmount()}</Text>
+        
         <View style={styles.board}>
           <MineField board={this.state.board} 
             onOpenField={this.onOpenField}
             onSelectField={this.onSelectField} />
         </View>
+        <Header flagsLeft={this.minesAmount() - flagsUsed(this.state.board)}
+          onNewGame={() => this.setState(this.createState())} />
       </View>
     )
   }
