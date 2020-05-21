@@ -5,8 +5,6 @@ import {
   StyleSheet
 } from 'react-native';
 import params from './params'
-import Field from './components/Field'
-import Flag from './components/Flag'
 import MineField from './components/MineField'
 import { createMineBoard } from './functions'
 
@@ -35,7 +33,7 @@ export default class App extends Component {
   render() {
     return (
       <View >
-        <Text >Iniciando o mines</Text>
+        <Text style={styles.container}>Iniciando o mines</Text>
         <Text>Tamanho da grade: 
           {params.getRowsAmount()} x {params.getColumnsAmount()}</Text>
         <View style={styles.board}>
