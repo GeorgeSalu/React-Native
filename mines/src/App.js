@@ -18,6 +18,7 @@ import {
   flagsUsed
 } from './functions'
 import Header from './components/Header'
+import LevelSelection from './screens/LevelSelection'
 
 export default class App extends Component {
 
@@ -39,7 +40,8 @@ export default class App extends Component {
     return {
       board: createMineBoard(rows, cols, this.minesAmount()),
       won: false,
-      lost: false
+      lost: false,
+      showLevelSelection: false
     }
   }
 
@@ -73,17 +75,26 @@ export default class App extends Component {
     this.setState({ board, won })
   }
 
+  onLevelSelected = level => {
+    params.difficultLevel = level
+    this.setState(this.createState())
+  }
+
   render() {
     return (
       <View >
-        
+        <LevelSelection isVisible={this.state.showLevelSelection}
+        onLevelSelected={this.onLevelSelected}
+        onCancel={() => this.setState({ showLevelSelection: false })} />
+        <Header flagsLeft={this.minesAmount() - flagsUsed(this.state.board)}
+          onNewGame={() => this.setState(this.createState())} 
+          onFlagPress={() => this.setState({ showLevelSelection: true }) }/>
         <View style={styles.board}>
           <MineField board={this.state.board} 
             onOpenField={this.onOpenField}
             onSelectField={this.onSelectField} />
         </View>
-        <Header flagsLeft={this.minesAmount() - flagsUsed(this.state.board)}
-          onNewGame={() => this.setState(this.createState())} />
+        
       </View>
     )
   }
