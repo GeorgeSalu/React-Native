@@ -5,6 +5,7 @@ import {
 } from 'react-native';
 
 import params from './params'
+import Field from './components/Field'
 
 export default class App extends Component {
   render() {
@@ -13,6 +14,7 @@ export default class App extends Component {
         <Text >Iniciando o mines</Text>
         <Text>Tamanho da grade: 
           {params.getRowsAmount()} x {params.getColumnsAmount()}</Text>
+        <Field />
       </View>
     )
   }
