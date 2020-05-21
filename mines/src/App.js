@@ -14,7 +14,8 @@ import {
   openField, 
   wonGame, 
   showMines ,
-  invertFlag
+  invertFlag,
+  flagsUsed
 } from './functions'
 
 export default class App extends Component {
