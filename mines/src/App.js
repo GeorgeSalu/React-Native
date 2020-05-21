@@ -3,7 +3,6 @@ import {
   View,
   Text,
 } from 'react-native';
-
 import params from './params'
 import Field from './components/Field'
 
