@@ -96,4 +96,11 @@ const wonGame = board => fields(board).filter(pendding).length === 0
 const showMines = board => fields(board).filter(field => field.mined)
   .forEach(field => field.opened = true)
 
-export { createMineBoard, cloneBoard, openField, hadExplosion, wonGame, showMines }
+export { 
+  createMineBoard, 
+  cloneBoard, 
+  openField, 
+  hadExplosion, 
+  wonGame, 
+  showMines 
+}
