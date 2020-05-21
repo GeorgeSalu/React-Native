@@ -5,6 +5,7 @@ import {
 } from 'react-native';
 import params from './params'
 import Field from './components/Field'
+import Flag from './components/Flag'
 
 export default class App extends Component {
   render() {
@@ -24,6 +25,7 @@ export default class App extends Component {
         <Field mined opened exploded />
         <Field flagged />
         <Field flagged opened/>
+        <Flag bigger />
       </View>
     )
   }
