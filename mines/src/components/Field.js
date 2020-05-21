@@ -4,7 +4,7 @@ import params from '../params'
 
 export default props => {
   const styleField = [styles.field]
-  //ooutros estilos aqui
+  //outros estilos aqui
   if (styleField.length === 1) styleField.push(styles.regular)
 
   return (
