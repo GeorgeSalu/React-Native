@@ -27,6 +27,5 @@ const styles = StyleSheet.create({
   },
   taskList: {
     flex: 7,
-
   }
 })
