@@ -8,7 +8,7 @@ import 'moment/locale/pt-br'
 
 export default class TaskList extends Component {
   render() {
-    const today = moment().locale('pt-br').format('ddd, D [de] MMMM ')
+    const today = moment().locale('pt-br').format('ddd, D [de] MMMM')
 
     return (
       <View style={styles.container}>
