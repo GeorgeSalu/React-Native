@@ -14,3 +14,13 @@ Além de todos os fundamentos, criaremos mais quatro projetos, inspirados em apl
 
 4. Intragram: Nessa aplicação, vamos integrar a câmera e galeria de imagens do dispositivo, vamos utilizar o Firebase como backend e seu banco NoSQL, sua autenticação e até mesmo seu serviço de storage.
 
+O que você aprenderá
+
+    Base sólida de Javascript com os novos recursos da linguagem
+    Fundamentos e ciclo de vida do React
+    Entender como estilizar sua aplicação com Flexbox
+    Criar projetos de aplicações reais, com layouts atrativos
+    Criar rotas, eventos de swipe, trabalhar com imagens, câmeras e diversas outras funcionalidades
+    Integrar suas aplicações com Redux
+    Criar e integrar a aplicação com um servidor backend em NodeJs, utilizando banco relacional
+    Integrar a aplicação com banco NoSQL, utilizando o Firebase
