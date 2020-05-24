@@ -10,7 +10,14 @@ import {
 } from 'react-native'
 import commonStyles from '../commonStyles'
 
+const initialState = { desc: '' }
+
 export default class AddTask extends Component {
+
+  state = {
+    ...initialState
+  }
+
   render () {
     return (
       <Modal transparent={true} visible={this.props.isVisible} 
@@ -21,9 +28,12 @@ export default class AddTask extends Component {
         </TouchableWithoutFeedback>
         <View style={styles.container}>
           <Text style={styles.header}>Nova tarefa</Text>
-          <TextInput style={styles.input} />
+          <TextInput style={styles.input}  
+            placeholder="Informe a descrição ...." 
+            value={this.state.desc} 
+            onChangeText={desc => this.setState({ desc })} />
           <View style={styles.bottons}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={this.props.onCancel}>
               <Text style={styles.botton}>Cancelar</Text>
             </TouchableOpacity>
             <TouchableOpacity>
