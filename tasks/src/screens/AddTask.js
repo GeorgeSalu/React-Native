@@ -27,7 +27,7 @@ export default class AddTask extends Component {
                         onChange={(_, date) => this.setState({ date, showDatePicker: false })}
                         mode='date' />
 
-    const dateString  = moment(this.state.date).format('ddd, D [de] MMMM [de] YYYY')
+    const dateString  = moment(this.state.date).format('dddd, D [de] MMMM [de] YYYY')
 
     if(Platform.OS === 'android') {
       datePicker = (
@@ -117,5 +117,6 @@ const styles = StyleSheet.create({
   date: {
     fontFamily: commonStyles.fontFamily,
     fontSize: 20,
+    marginLeft: 15
   }
 })
