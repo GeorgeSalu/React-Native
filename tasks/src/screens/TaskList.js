@@ -18,7 +18,7 @@ export default class TaskList extends Component {
   state = {
     showDoneTasks: true,
     visibleTasks: [],
-    showAddTask: true,
+    showAddTask: false,
     tasks: [{
       id: Math.random(),
       desc: 'Comprar livro de react native',
