@@ -12,12 +12,13 @@ import moment from 'moment'
 import 'moment/locale/pt-br'
 
 import Task from '../components/Task'
-
+import AddTask from '../screens/AddTask'
 export default class TaskList extends Component {
 
   state = {
     showDoneTasks: true,
     visibleTasks: [],
+    showAddTask: true,
     tasks: [{
       id: Math.random(),
       desc: 'Comprar livro de react native',
@@ -66,6 +67,8 @@ export default class TaskList extends Component {
 
     return (
       <View style={styles.container}>
+        <AddTask isVisible={this.state.showAddTask} 
+                  onCancel={() => this.setState({ showAddTask: false })} />
         <ImageBackground source={todayImage} 
           style={styles.background}>
             <View style={styles.iconBar}>
