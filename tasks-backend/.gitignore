@@ -3,3 +3,6 @@
 node_modules/
 npm-debug.log
 yarn-error.log
+
+## em um projeto real arquivo .env deveria ser ignorado
+## .env
