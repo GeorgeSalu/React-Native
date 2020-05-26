@@ -19,7 +19,16 @@ module.exports = app => {
         }
 
         const payload = { id: user.id }
+        res.json({
+          name: user.name,
+          email: user.email,
+          token: jwt.encode(payload, authSecret)
+        })
       })
+    } else {
+      res.status(400).send('usuario não cadastrado !')
     }
   }
+
+  return {signin}
 }
