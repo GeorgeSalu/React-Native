@@ -74,9 +74,10 @@ export default class Auth extends Component {
 
     if(this.state.stageNew) {
       validations.push(this.state.name && this.state.name.trim().length >= 3)
-      validations.push(this.state.confirmPassword)
       validations.push(this.state.password === this.state.confirmPassword)
     }
+
+    const validForm = validations.reduce((t, a) => t && a)
 
     return (
       <ImageBackground source={backgroundImage} style={styles.background}>
@@ -101,8 +102,10 @@ export default class Auth extends Component {
             onChangeText={confirmPassword => this.setState({ confirmPassword })}
             secureTextEntry={true} />
           }
-          <TouchableOpacity onPress={this.signinOrSignup}>
-            <View style={styles.button}>
+          <TouchableOpacity onPress={this.signinOrSignup}
+            disabled={!validForm}>
+            
+            <View style={[styles.button, validForm ? {} : { backgroundColor: '#AAA' }]}>
               <Text style={styles.buttonText}>
                 {this.state.stageNew ? 'Registrar' : 'Entrar'}
               </Text>
