@@ -74,15 +74,13 @@ export default class TaskList extends Component {
     }))
   }
 
-  toggleTask = taskId => {
-    const tasks = [...this.state.tasks]
-    tasks.forEach(task => {
-      if(task.id === taskId) {
-        task.doneAt = task.doneAt ? null : new Date()
-      }
-    })
-
-    this.setState({ tasks }, this.filterTasks)
+  toggleTask = async taskId => {
+    try {
+      await axios.put(`${server}/tasksToggle/${taskId}`)
+      await this.loadTasks()
+    } catch (error) {
+      showError(error)
+    }
   }
 
   addTask = async newTask => {
@@ -105,9 +103,13 @@ export default class TaskList extends Component {
     this.setState({ showAddTask: false }, this.loadTasks)
   }
 
-  deleteTask = id => {
-    const tasks = this.state.tasks.filter(task => task.id !== id)
-    this.setState({ tasks }, this.filterTasks)
+  deleteTask = async taskId => {
+    try {
+      await axios.delete(`${server}/tasks/${taskId}`)
+      await this.loadTasks()
+    } catch (error) {
+      showError(error)
+    }
   }
 
   render() {
