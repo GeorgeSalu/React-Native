@@ -5,7 +5,6 @@ import {
   StyleSheet, 
   View, 
   TouchableOpacity, 
-  Platform,
   Alert
 } from 'react-native'
 import axios from 'axios'
@@ -15,14 +14,18 @@ import AuthInput from '../components/AuthInput'
 
 import { server, showError, showSuccess } from '../common'
 
+const initialState = {
+  name: '',
+  email: '',
+  password: '',
+  confirmPassword: '',
+  stageNew: false
+}
+
 export default class Auth extends Component {
 
   state = {
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    stageNew: false
+    ...initialState
   }
 
   signinOrSignup = () => {
@@ -43,7 +46,7 @@ export default class Auth extends Component {
       })
 
       showSuccess('Usuario cadastrado')
-      this.setState({ stageNew: false })
+      this.setState({ ...initialState })
     } catch (error) {
       showError(error)
     }
