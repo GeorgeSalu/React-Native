@@ -49,7 +49,7 @@ export default class TaskList extends Component {
     try {
       const maxDate = moment().format('YYYY-MM-DD 23:59:59')
       const res = await axios.get(`${server}/tasks?date=${maxDate}`)
-      this.setState({ tasks: res.data })
+      this.setState({ tasks: res.data }, this.filterTasks)
 
     } catch (error) {
       showError(error)
@@ -85,21 +85,24 @@ export default class TaskList extends Component {
     this.setState({ tasks }, this.filterTasks)
   }
 
-  addTask = newTask => {
+  addTask = async newTask => {
     if(!newTask.desc || !newTask.desc.trim()) {
       Alert.alert('Dados Invalidos', 'Descrição não informada')
       return
     }
 
-    const tasks = [...this.state.tasks]
-    tasks.push({
-      id: Math.random(),
-      desc: newTask.desc,
-      estimatedAt: newTask.date,
-      doneAt: null
-    })
+    try {
+      await axios.post(`${server}/tasks`, {
+        desc: newTask.desc,
+        estimatedAt: newTask.data
+      })
 
-    this.setState({ tasks, showAddTask: false }, this.filterTasks)
+      this.setState({ showAddTask: false }, this.loadTasks)
+    } catch (error) {
+      showError(error)
+    }
+
+    this.setState({ showAddTask: false }, this.loadTasks)
   }
 
   deleteTask = id => {
