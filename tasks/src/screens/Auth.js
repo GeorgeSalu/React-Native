@@ -5,7 +5,8 @@ import {
   StyleSheet, 
   View, 
   TextInput, 
-  TouchableOpacity, Platform
+  TouchableOpacity, 
+  Platform
 } from 'react-native'
 
 import backgroundImage from '../../assets/imgs/login.jpg'
