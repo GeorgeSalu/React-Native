@@ -32,7 +32,7 @@ export default class Auth extends Component {
     if(this.state.stageNew) {
       this.signup()
     } else {
-      Alert.alert('Sucesso', 'logar')
+      this.signin()
     }
   }
 
@@ -47,6 +47,20 @@ export default class Auth extends Component {
 
       showSuccess('Usuario cadastrado')
       this.setState({ ...initialState })
+    } catch (error) {
+      showError(error)
+    }
+  }
+
+  signin = async () => {
+    try {
+      const res = await axios.post(`${server}/signin`, {
+        email: this.state.email,
+        password: this.state.password
+      })
+
+      axios.defaults.headers.common['Authorizatio'] = `bearer ${res.data.toke}`
+      this.props.navigation.navigate('Home')
     } catch (error) {
       showError(error)
     }
