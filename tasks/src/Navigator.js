@@ -4,7 +4,7 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation'
 import Auth from './screens/Auth'
 import TaskList from './screens/TaskList'
 
-const MainRoutes = {
+const mainRoutes = {
   Auth: {
     name: 'Auth',
     screen: Auth
@@ -15,8 +15,8 @@ const MainRoutes = {
   }
 }
 
-const MainNavigator = createSwitchNavigator(MainRoutes, {
+const mainNavigator = createSwitchNavigator(mainRoutes, {
   initialRouteName: 'Auth'
 })
 
-export default createAppContainer(MainNavigator)
+export default createAppContainer(mainNavigator)
