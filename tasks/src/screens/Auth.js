@@ -13,6 +13,8 @@ import backgroundImage from '../../assets/imgs/login.jpg'
 import commonStyles from '../commonStyles'
 import AuthInput from '../components/AuthInput'
 
+import { server, showError, showSuccess } from '../common'
+
 export default class Auth extends Component {
 
   state = {
