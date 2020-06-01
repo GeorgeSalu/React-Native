@@ -8,3 +8,11 @@ const imprimirResultado = function(a, b , operacao = soma) {
 
 imprimirResultado(3,4 )
 imprimirResultado(3,4, soma)
+
+const pessoa = {
+  falar: function() {
+    console.log('opa')
+  }
+}
+
+pessoa.falar()
