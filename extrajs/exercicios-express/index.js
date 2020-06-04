@@ -14,6 +14,10 @@ app.get('/clientes/:id', (req, res) => {
   res.send(`Cliente ${req.params.id} selecionado`)
 })
 
+app.get('/clientes/relatorios', (req, res) => {
+  res.send(`Cliente relatorio: completo ${req.query.completo} selecionado`)
+})
+
 app.get('/opa',(req, res) => {
   res.json({
     data: [
