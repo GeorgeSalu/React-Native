@@ -1,6 +1,11 @@
 const express = require('express')
 const app = express()
 
+app.use('/opa', (req, res, next) => {
+  console.log('sera que serei chamado')
+  next()
+})
+
 app.get('/opa',(req, res) => {
   res.json({
     data: [
