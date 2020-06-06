@@ -1,7 +1,10 @@
 const express = require('express')
 const app = express()
+const bodyParser = require('body-parser')
 
 const saudacao = require('./saudacaoMid')
+
+app.use(bodyParser.text())
 
 app.use(saudacao('guilherme'))
 
