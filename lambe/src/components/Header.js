@@ -55,7 +55,27 @@ const styles = StyleSheet.create({
     fontFamily: 'shelter',
     height: 30,
     fontSize: 28
+  },
+  userContainer: {
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  user: {
+    fontSize: 10,
+    color: '#888'
+  },
+  avatar: {
+    width: 30,
+    height: 30,
+    marginLeft: 10
   }
 })
 
-export default Header
+const mapStateToProps = ({ user }) => {
+  return {
+    email: user.email,
+    name: user.name
+  }
+}
+
+export default connect(mapStateToProps)(Header)
