@@ -74,4 +74,3 @@ const mapDispatchToPros = dispatch => {
 }
 
 export default connect(null, mapDispatchToPros)(Login)
-//export default Login
