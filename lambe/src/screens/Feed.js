@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
   }
 })
 
-//export default Feed
 const mapStateToProps = ({ posts }) => {
   return {
     posts: posts.posts

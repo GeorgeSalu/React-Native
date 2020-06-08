@@ -110,8 +110,6 @@ const styles = StyleSheet.create({
   }
 })
 
-//export default AddPhoto
-
 const mapStateToProps = ({ user }) => {
   return {
     email: user.email,
