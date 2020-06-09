@@ -41,7 +41,6 @@ class AddPhoto extends Component {
   }
 
   save = async () => {
-
     if(!this.props.name) {
       Alert.alert('Falha', noUser)
       return
@@ -85,7 +84,6 @@ class AddPhoto extends Component {
       </ScrollView>
     )
   }
-
 }
 
 const styles = StyleSheet.create({
