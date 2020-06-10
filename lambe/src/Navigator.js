@@ -64,4 +64,5 @@ const MenuConfig = {
 }
 
 const MenuNavigator = createBottomTabNavigator(MenusRoutes, MenuConfig)
+
 export default MenuNavigator
