@@ -35,12 +35,12 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
           const filename = encodeURIComponent(file.name)
           const imageUrl = 'https://firebasestorage.googleapis.com/v0/b/'
             + bucket.name + '/o/' + filename + '?' + '?alt=media&token=' + id
-          return response.status(201).json({ imageUrl: imageUrl })
+          return response.status(201).json({ imageUrl })
         }
       })
     } catch (error) {
       console.log(error)
-      return response.status(500).json({ error: error })
+      return response.status(500).json({ error })
     }
   })
 });
