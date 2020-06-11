@@ -27,10 +27,10 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
             firebaseStorageDownloadTokens: id
           }
         }
-      }, (err, file) => {
-        if(err) {
-          console.log(err)
-          return response.status(500).json({ error: err })
+      }, (error, file) => {
+        if(error) {
+          console.log(error)
+          return response.status(500).json({ error })
         } else {
           const filename = encodeURIComponent(file.name)
           const imageUrl = 'https://firebasestorage.googleapis.com/v0/b/'
