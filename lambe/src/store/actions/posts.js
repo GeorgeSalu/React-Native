@@ -1,4 +1,4 @@
-import { ADD_POST, ADD_COMMENT } from './actionTypes'
+import { ADD_COMMENT } from './actionTypes'
 import axios from 'axios'
 
 export const addPost = post => {
