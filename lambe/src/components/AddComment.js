@@ -11,6 +11,7 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 class AddComment extends Component {
+  
   state = {
     comment: '',
     editMode: false

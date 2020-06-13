@@ -11,6 +11,7 @@ import Comments from './Comments'
 import AddComments from './AddComment'
 
 class Post extends Component {
+  
   render() {
     const addComment = this.props.name ?
       <AddComments postId={this.props.id} /> : null
