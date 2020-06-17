@@ -15,7 +15,7 @@ import {
 } from 'react-native'
 import ImagePicker from 'react-native-image-picker'
 
-const noUser = 'Voce precisa estar logado para adicionar imagens'
+const noUser = 'Você precisa estar logado para adicionar imagens'
 
 class AddPhoto extends Component {
   state = {
