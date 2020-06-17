@@ -21,7 +21,10 @@ export const addPost = post => {
         post.image = res.data.imageUrl
         axios.post('/posts.json', { ...post })
           .catch(err => console.log(err))
-          .then(res => console.log(res.data))
+          .then(res => {
+            dispatch(fetchPosts())
+            dispatch(postCreated())
+          })
       })
   }
 }
@@ -54,7 +57,7 @@ export const fetchPosts = () => {
           })
         }
 
-        dispatch(setPosts(posts))
+        dispatch(setPosts(posts.reverse()))
       })
   }
 }
