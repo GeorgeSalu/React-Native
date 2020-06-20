@@ -24,3 +24,7 @@ O que você aprenderá
   - Integrar suas aplicações com Redux
   - Criar e integrar a aplicação com um servidor backend em NodeJs, utilizando banco relacional
   - Integrar a aplicação com banco NoSQL, utilizando o Firebase
+
+Há algum requisito ou pré-requisito para o curso?
+
+    Conhecimento básico de JavaScript
