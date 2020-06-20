@@ -17,7 +17,12 @@ export const addPost = post => {
         image: post.image.base64
       }
     })
-      .catch(err => console.log(err))
+      .catch(err => {
+        dispatch(setMessage({
+          title: 'Erro',
+          text: 'Ocorreu um erro inesperado!'
+        }))
+      })
       .then(res => {
         post.image = res.data.imageUrl
         axios.post('/posts.json', { ...post })
