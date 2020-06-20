@@ -70,7 +70,7 @@ export const login = user => {
           axios.get(`/users/${res.data.localId}.json`)
             .catch(err => console.log(err))
             .then(res => {
-              user.password = null,
+              delete user.password,
               user.name = res.data.name
               dispatch(userLogged(user))
               dispatch(userLoaded())
