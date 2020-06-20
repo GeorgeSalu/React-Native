@@ -1,6 +1,5 @@
 import { 
   SET_POSTS, 
-  ADD_COMMENT,
   CREATING_POST,
   POST_CREATED
 } from './actionTypes'
