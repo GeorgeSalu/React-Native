@@ -5,6 +5,14 @@ import Navigator from './Navigator'
 import { setMessage } from './store/actions/message'
 
 class App extends Component {
+
+  componentDidUpdate = () => {
+    if(this.props.text && this.props.text.trim()) {
+      Alert.alert(this.props.title || 'Mensagem', this.props.text)
+      this.props.clearMessage()
+    }
+  }
+
   render() {
     return (
       <Navigator />
