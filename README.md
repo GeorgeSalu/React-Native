@@ -28,3 +28,9 @@ O que você aprenderá
 Há algum requisito ou pré-requisito para o curso?
 
     Conhecimento básico de JavaScript
+
+Para quem é este curso:
+
+    Programadores que conhecer o React que desejam ampliar seu uso para dispositivos móveis
+    Programadores em geral que desejam aprender os conceitos e ciclo de vida do React Native
+    Programadores de aplicações móveis que gostariam de criar aplicações para Android e iOS com uma linguagem apenas
